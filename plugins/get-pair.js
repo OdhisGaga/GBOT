@@ -5,9 +5,9 @@ cmd({
     pattern: "pair",
     alias: ["getpair", "clonebot"],
     react: "✅",
-    desc: "Get pairing code for TOHID_MD bot",
+    desc: "Get pairing code for Xgaga bot",
     category: "download",
-    use: ".pair +917849917350",
+    use: ".pair +254....",
     filename: __filename
 }, async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
@@ -16,18 +16,18 @@ cmd({
         
         // Validate phone number format
         if (!phoneNumber || !phoneNumber.match(/^\+?\d{10,15}$/)) {
-            return await reply("❌ Please provide a valid phone number with country code\nExample: .pair +917849917350");
+            return await reply("❌ Please provide a valid phone number with country code\nExample: .pair 254...");
         }
 
         // Make API request to get pairing code
-        const response = await axios.get(`https://tohid-ai-pair1-a0c7bc9ba92a.herokuapp.com/pair?phone=${encodeURIComponent(phoneNumber)}`);
+        const response = await axios.get(`https://gaga-session-wbc6.onrender.com?phone=${encodeURIComponent(phoneNumber)}`);
         
         if (!response.data || !response.data.code) {
             return await reply("❌ Failed to retrieve pairing code. Please try again later.");
         }
 
         const pairingCode = response.data.code;
-        const doneMessage = "> *TOHID_MD PAIRING COMPLETED*";
+        const doneMessage = "> Connected successfully✅*";
 
         // Send initial message with formatting
         await reply(`${doneMessage}\n\n*Your pairing code is:* ${pairingCode}`);
@@ -46,12 +46,12 @@ cmd({
 
 
 cmd({
-    pattern: "pair2",
+    pattern: "link",
     alias: ["getpair2", "clonebot2"],
     react: "✅",
-    desc: "Get pairing code for TOHID_MD bot",
+    desc: "Get pairing code for Xgaga bot",
     category: "download",
-    use: ".pair +917849917350",
+    use: ".pair +254...",
     filename: __filename
 }, async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
@@ -60,18 +60,18 @@ cmd({
         
         // Validate phone number format
         if (!phoneNumber || !phoneNumber.match(/^\+?\d{10,15}$/)) {
-            return await reply("❌ Please provide a valid phone number with country code\nExample: .pair +917849917350");
+            return await reply("❌ Please provide a valid phone number with country code\nExample: .pair +254...");
         }
 
         // Make API request to get pairing code
-        const response = await axios.get(`https://tohid-ai-pair1-a0c7bc9ba92a.herokuapp.com/pair?phone=${encodeURIComponent(phoneNumber)}`);
+        const response = await axios.get(`https://gaga-session-wbc6.onrender.com?phone=${encodeURIComponent(phoneNumber)}`);
         
         if (!response.data || !response.data.code) {
             return await reply("❌ Failed to retrieve pairing code. Please try again later.");
         }
 
         const pairingCode = response.data.code;
-        const doneMessage = "> *TOHID_MD PAIRING COMPLETED*";
+        const doneMessage = "> *Successfully connected ✅*";
 
         // Send initial message with formatting
         await reply(`${doneMessage}\n\n*Your pairing code is:* ${pairingCode}`);
