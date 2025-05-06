@@ -35,7 +35,7 @@ cmd({
 👀 *Views:* ${yts.views}
 👤 *Author:* ${yts.author.name}
 🔗 *Link:* ${yts.url}
-> ©𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝚃𝙾𝙷𝙸𝙳_𝙼𝙳 ❤️`;
+> Keep using Xgaga bots`;
 
         // Send video directly with caption
         await conn.sendMessage(
@@ -89,8 +89,8 @@ cmd({
             body: "Join our WhatsApp Channel",
             mediaType: 1,
             thumbnailUrl: song.thumbnail.replace('default.jpg', 'hqdefault.jpg'),
-            sourceUrl: 'https://whatsapp.com/channel/0029VaGyP933bbVC7G0x0i2T',
-            mediaUrl: 'https://whatsapp.com/channel/0029VaGyP933bbVC7G0x0i2T',
+            sourceUrl: '',
+            mediaUrl: '',
             showAdAttribution: true,
             renderLargerThumbnail: true
         }
